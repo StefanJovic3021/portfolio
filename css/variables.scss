@@ -1,0 +1,76 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+
+// Variables
+$verydarkcolor: #0f0f0f;
+$darkcolor: #181a1b;
+$lighGray: #313131;
+$standardTextColor: #f5f9ff;
+$zcoolFont: 'ZCOOL QingKe HuangYou', cursive;
+$dosisFont: 'Dosis', sans-serif;
+
+@mixin customFontZCool{
+    font-family: $zcoolFont;
+    color: $standardTextColor;
+}
+@mixin customFontDosis{
+    font-family: $dosisFont;
+    color: $standardTextColor;
+}
+@mixin customNavFont{
+    @include customFontZCool();
+    font-size: 25px;
+}
+@mixin customNameFont{
+    @include customFontZCool();
+    font-size: 50px;
+}
+@mixin customHeadFont1{
+    @include customFontZCool();
+    font-size: 70px;
+}
+@mixin customHeadFont2{
+    @include customFontZCool();
+    font-size: 35px;
+}
+@mixin customHeadLink{
+    @include customHeadFont2();
+    color: #ffa500;
+    text-decoration: none;
+}
+@mixin customScrollBar{
+    &::-webkit-scrollbar {
+        width: 12px;
+        height: 12px;
+    }
+    &::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #ff8800;
+        border: 22px none #ffffff;
+        border-radius: 50px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: #ffc800;
+    }
+    &::-webkit-scrollbar-thumb:active {
+        background: #c27b00;
+    }
+    &::-webkit-scrollbar-track {
+        background: #3b3b3b;
+        border: 0px none #ffffff;
+        border-radius: 72px;
+    }
+    &::-webkit-scrollbar-track:hover {
+        background: #2b2b2b;
+    }
+    &::-webkit-scrollbar-track:active {
+        background: #242424;
+    }
+    &::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+}
