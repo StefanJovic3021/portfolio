@@ -1,0 +1,540 @@
+// Variables
+@import './variables';
+
+// Variables
+@mixin progressBarFilling{
+    background-size: 56.57px 56.57px;
+    height: 20px;
+    border-radius: 10px;
+    animation: gradient_fill_animation 12s linear infinite;
+    background-image: linear-gradient(
+        45deg,
+    #f2ff00 25%,
+    #ff7b00 25%,
+    #ff7b00 50%,
+    #f2ff00 50%,
+    #f2ff00 75%,
+    #ff7b00 75%,
+    #ff7b00 100%
+    );
+}
+
+// Animations
+@keyframes gradient_fill_animation{
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: 1200px;
+    }
+}
+
+// Code
+*{
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+
+.redclr{
+    color: #ff0000;
+}
+.blueclr{
+    color: #00aeff;
+}
+.brownclr{
+    color: rgb(255, 237, 198);
+}
+body{
+    @include customScrollBar();
+    header{
+        width: 100%;
+        background-color: $verydarkcolor;
+        @include customNavFont();
+        #sandwich_button{
+            display: none;
+        }
+        #main_nav{
+            ul{
+                display: flex;
+                list-style-type: none;
+                justify-content: space-evenly;
+                li{
+                    padding: 10px;
+                    a{
+                        color: $standardTextColor;
+                        text-decoration: none;
+                        transition: 0.4s;
+                        &:hover{
+                            color: #ffa500;
+                        }                
+                    }
+                }
+            }
+        }
+        #header_sandwich_dropdown{
+            position: relative;
+            display: none;
+        }
+    }
+    main{
+        #mainShowcase{
+            display: flex;
+            align-content: center;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            cursor: default;
+            //background: url('http://i.stack.imgur.com/kx8MT.gif'){
+                //size: cover;
+                //position: center;
+            //}
+            height: 95vh;
+            video{
+                position: absolute;
+                z-index: -1;
+                object-fit: fill;
+            }
+            h1, p, a{
+                //border: 2px solid red;
+                width: 45%;
+                margin: 20px;
+                text-shadow: 4px 3px 3px rgba(0, 0, 0, 0.6);
+            }
+            h1{
+                @include customNameFont();
+            }
+            #headText1{
+                @include customHeadFont1();
+            }
+            #headText2{
+                @include customHeadFont2();
+            }
+            #headLink{
+                @include customHeadLink();
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+        #restOfBody{
+            background-color: $darkcolor;
+            //height: 400vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .header_holders{
+                @include customHeadFont2();
+                text-align: center;
+                margin: 20px;
+                padding: 30px;
+                width: 30vw;
+                .head_container{
+                    h2{
+                        border-bottom: 2px solid #ffa500;
+                    }
+                }
+            }
+            .content{
+                @include customHeadFont2();
+                background-color: $lighGray;
+                margin: 50px 0px 40px 0px;
+                padding: 20px;
+                border-radius: 20px;
+                -webkit-box-shadow: 10px 10px 11px 0px rgba(0,0,0,0.75);
+                -moz-box-shadow: 10px 10px 11px 0px rgba(0,0,0,0.75);
+                box-shadow: 10px 10px 11px 0px rgba(0,0,0,0.75);
+                #about_content_container{
+                    width: 70vw;
+                    padding: 20px;
+                    display: flex;
+                    @include customFontDosis();
+                    #content_container_left{
+                        width: 50%;
+                        padding: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        border-right: 2px solid rgb(85, 85, 85);
+                        div{
+                            background-image: url('../images/me.jpg');
+                            width: 250px;
+                            height: 250px;
+                            background-position: center;
+                            background-size: contain;
+                            border: 3px solid rgba(31, 31, 31, 0.733);
+                            border-radius: 125px;
+                        }
+                        p{
+                            margin: 3px;
+                        }
+                        p, span{
+                            font-size: 24px;
+                            width: 70%;
+                        }
+                        span{
+                            color: #ffa500;
+                            font-weight: 600;
+                        }
+                    }
+                    #content_container_right{
+                        width: 50%;
+                        padding: 20px;
+                        .progress_block{
+                            margin: 30px 0px;
+                            p{
+                                float: right;
+                            }
+                            .progress_bar_back{
+                                background-color: rgb(31, 31, 31);
+                                width: 100%;
+                                height: 20px;
+                                border-radius: 10px;
+                                #progress_bar_fill1, #progress_bar_fill2{
+                                    @include progressBarFilling();
+                                    width: 90%;
+                                }
+                                #progress_bar_fill3{
+                                    @include progressBarFilling();
+                                    width: 80%;
+                                }
+                                #progress_bar_fill4{
+                                    @include progressBarFilling();
+                                    width: 75%;
+                                }
+                                #progress_bar_fill5{
+                                    @include progressBarFilling();
+                                    width: 85%;
+                                }
+                            }
+                        }
+                    }
+                }
+                #form_container{
+                    width: 80vw;
+                    height: 60vh;
+                    display: flex;
+                    padding: 20px;
+                    #contact_info{
+                        @include customFontDosis();
+                        width: 50%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        div{
+                            display: flex;
+                            justify-content: space-between;
+                            margin: 20px;
+                            border-bottom: 2px solid rgb(85, 85, 85);
+                        }
+                        i{
+                            color: #ffa500;
+                            font-size: 50px;
+                            transition: 0.3s ease;
+                            &:hover{
+                            transform: scale(1.1) rotate(3deg);
+                            color: rgb(255, 102, 0);
+                            }
+                        }
+                        border-right: 2px solid rgb(85, 85, 85);
+                    }
+                    #form_holder{
+                        width: 50%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        font-size: 30px;
+                        padding: 20px;
+                        @include customFontDosis();
+                        form{
+                            span{
+                                color: #ff0000;
+                            }
+                            p{
+                                padding: 10px 0px;
+                            }
+                            div{
+                                display: flex;
+                                margin-bottom: 20px;
+                                #name, #e_mail, #textarea{
+                                    width: 100%;
+                                    height: 40px;
+                                    font-size: 26px;
+                                    background-color: transparent;
+                                    border: none;
+                                    border-bottom: 2px solid #ffa500;
+                                    color: $standardTextColor;
+                                    box-sizing: border-box;
+                                    @include customFontDosis();
+                                    &:focus{
+                                        border: none;
+                                        border-bottom: 2px solid rgb(255, 123, 0);
+                                    }
+                                }
+                                #textarea{
+                                    min-height: 150px;
+                                    max-height: 260px;
+                                    max-width: 98%;
+                                    min-width: 98%;
+                                    @include customScrollBar();
+                                }
+                                #submit_button, #reset_button{
+                                    cursor: pointer;
+                                    border: none;
+                                    border-radius: 10px;
+                                    background-color: $darkcolor;
+                                    padding: 10px;
+                                    margin: 10px;
+                                    font-size: 25px;
+                                    @include customFontZCool();
+                                    color: #ffa500;
+                                    transition: 0.2s ease-in-out;
+                                    &:hover{
+                                        transform: scale(1.05);
+                                        color: $darkcolor;
+                                        background-color: #ffa500;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #skills_container{
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                width: 80vw;
+                min-height: 70vh;
+                margin: 30px 0px 100px 0px;
+                .skill_block{
+                    position: relative;
+                    margin: 20px;
+                    width: 300px;
+                    height: 300px;
+                    transition: 0.5s ease-in-out;
+                    transform-style: preserve-3d;
+                    border-radius: 20px;
+                    background-color: $lighGray;
+                    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+                                rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+                                rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+                    &:hover{
+                        transform: rotateY(180deg);
+                        box-shadow: none;
+                    }
+                    .block_style{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background-position: center;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        backface-visibility: hidden;
+                    }
+                    #block_html5{
+                        background-image: url('../images/html5logo.png');
+                    }
+                    #block_css3{
+                        background-image: url('../images/css3logo.png');
+                    }
+                    #block_csharp{
+                        background-image: url('../images/charplogo.png');
+                    }
+                    #block_photoshop{
+                        background-image: url('../images/photoshoplogo.png');
+                    }
+                    #block_unity{
+                        background-image: url('../images/unitylogo.png');
+                    }
+                    #block_blender{
+                        background-image: url('../images/blenderlogo.png');
+                    }
+                    .desc_skill_block{
+                        @include customFontZCool();
+                        position: absolute;
+                        height: 275px;
+                        backface-visibility: hidden;
+                        transform: rotateY(180deg);
+                        border: 2px solid rgba(15, 15, 15, 0.486);
+                        border-radius: 20px;
+                        padding: 10px;
+                        background-color: $verydarkcolor;
+                        p{
+                            font-size: 20px;
+                            text-align: justify;
+                        }
+                        h3{
+                            font-size: 30px;
+                            text-align: center;
+                            margin: 10px;
+                            color: $standardTextColor;
+                            border-bottom: 2px solid #ffa500;
+                        }
+                    }
+                }
+            }
+            #my_stats_container{
+                width: 100%;
+                height: 35vh;
+                background-color: $lighGray;
+                display: flex;
+                box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+                align-items: center;
+                justify-content: center;
+                #stats_holder{
+                    display: flex;
+                    justify-content: baseline;
+                    div{
+                        @include customFontZCool();
+                        margin: 30px;
+                        width: 250px;
+                        height: 250px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-around;
+                        i{
+                            font-size: 120px;
+                            color: #ffa500;
+                        }
+                        p{
+                            font-size: 30px;
+                            color: #ffa500;
+                            text-align: center;
+                        }
+                        transition: 0.4s ease-in-out;
+                        &:hover{
+                            transform: scale(1.05);
+                            i{
+                                color: rgb(255, 94, 0);
+                            }
+                            p{
+                                color: rgb(255, 94, 0);
+                            }
+                        }
+                    }
+                }
+            }
+            #projects_container{
+                @include customFontZCool();
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                width: 70vw;
+                min-height: 70vh;
+                margin: 30px 0px 100px 0px;
+                a{
+                    text-decoration: none;
+                }
+                .project_holders{
+                    position: relative;
+                    margin: 40px 10px 40px 10px;
+                    width: 400px;
+                    height: 225px;
+                    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+                    transition: 0.5s ease;
+                    .project_style{
+                        width: 100%;
+                        height: 100%;
+                        background-position: center;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                    }
+                    #project1{
+                        background-image: url('../images/dust_cover_optimised.jpg');
+                    }
+                    #project2{
+                        background-image: url('../images/spacey_cover.jpg');
+                    }
+                    #project3{
+                        background-image: url('../images/chromacore_cover.jpg');
+                    }
+                    #project4{
+                        background-image: url('../images/servis_cover.jpg');
+                    }
+                    #project5{
+                        background-image: url('../images/echoes_cover.jpg');
+                    }
+                    #project6{
+                        background-image: url('../images/slav_cover.jpg');
+                    }
+                    .project_desc{
+                        position: absolute;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        cursor: default;
+                        .hide{
+                            background-color: rgba(24, 26, 27, 0.9);
+                            opacity: 0;
+                            width: 100%;
+                            height: 100%;
+                            font-size: 22px;
+                            text-align: center;
+                            color: $standardTextColor;
+                            transition: 0.3s ease;
+                            p{
+                                padding-bottom: 5px;
+                            }
+                            a{
+                                text-decoration: none;
+                                color: #ffa500;
+                            }
+                        }
+                        h3{
+                            padding: 10px 0px 0px 0px;
+                        }
+                        h4{
+                            padding: 2px 0px 30px 0px;
+                        }
+                        &:hover .hide{
+                            opacity: 1;
+                        }
+                    }
+                    .project_tech{
+                        background-color:#ff7b00;
+                        color: $standardTextColor;
+                        font-size: 30px;
+                        text-align: center;
+                        padding: 5px 0px 5px 0px;
+                        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: $verydarkcolor;
+        width: 100%;
+        section{
+            p{
+                font-size: 20px;
+            }
+            p, i{
+                color: $standardTextColor;
+                font-family: $dosisFont;
+                margin: 5px 20px 5px 20px;
+            }
+            i{
+                font-size: 40px;
+                transition: 0.5s;
+                &:hover{
+                    color: #ffa500;
+                    transform:scale(1.2);
+                }
+            }
+        }
+    }
+    @import './responsive_pc_to_laptop';
+    @import './responsive_laptop';
+    @import './responsive_tablet';
+    @import './responsive_tablet_mid_phone';
+    @import './responsive_phoneL';
+    @import './responsive_phoneM_S';
+}
