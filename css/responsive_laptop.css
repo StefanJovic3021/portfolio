@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap");
+@media screen and (max-width: 1400px) {
+  main #restOfBody .content #form_container {
+    width: 80vw;
+    height: 60vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 20px;
+  }
+  main #restOfBody .content #form_container #contact_info {
+    font-family: "Dosis", sans-serif;
+    color: #f5f9ff;
+    width: 50%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-right: 2px solid #555555;
+  }
+  main #restOfBody .content #form_container #contact_info div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 20px;
+    border-bottom: 2px solid #555555;
+  }
+  main #restOfBody .content #form_container #contact_info i {
+    color: #ffa500;
+    font-size: 50px;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  main #restOfBody .content #form_container #contact_info i:hover {
+    -webkit-transform: scale(1.1) rotate(3deg);
+            transform: scale(1.1) rotate(3deg);
+    color: #ff6600;
+  }
+  main #restOfBody .content #form_container #form_container {
+    width: 80vw;
+    padding: 20px;
+  }
+  main #restOfBody .content #form_container #form_container #contact_info div {
+    font-size: 24px;
+    margin: 20px 10px;
+  }
+  main #restOfBody .content #form_container #form_container #contact_info i {
+    font-size: 34px;
+  }
+  main #restOfBody .content #form_container #form_container #form_holder {
+    font-size: 20px;
+    padding: 20px;
+  }
+  main #restOfBody .content #form_container #form_container #form_holder form span {
+    color: #ff0000;
+    font-size: 22px;
+  }
+  main #restOfBody .content #form_container #form_container #form_holder form p {
+    padding: 5px 0px;
+  }
+  main #restOfBody .content #form_container #form_container #form_holder form div {
+    margin-bottom: 15px;
+  }
+  main #restOfBody .content #form_container #form_container #form_holder form div #name, main #restOfBody .content #form_container #form_container #form_holder form div #e_mail, main #restOfBody .content #form_container #form_container #form_holder form div #textarea {
+    height: 30px;
+    font-size: 20px;
+  }
+  main #restOfBody .content #form_container #form_container #form_holder form div #textarea {
+    min-height: 150px;
+    max-height: 250px;
+  }
+  main #restOfBody .content #form_container #form_container #form_holder form div #submit_button, main #restOfBody .content #form_container #form_container #form_holder form div #reset_button {
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  header #sandwich_button {
+    display: none;
+  }
+  main #mainShowcase h1, main #mainShowcase p, main #mainShowcase a {
+    width: 65%;
+    margin: 20px;
+    text-shadow: 4px 3px 3px rgba(0, 0, 0, 0.6);
+  }
+  main #mainShowcase h1 {
+    font-family: "ZCOOL QingKe HuangYou", cursive;
+    color: #f5f9ff;
+    font-size: 40px;
+  }
+  main #mainShowcase #headText1 {
+    font-family: "ZCOOL QingKe HuangYou", cursive;
+    color: #f5f9ff;
+    font-size: 55px;
+  }
+  main #mainShowcase #headText2 {
+    font-family: "ZCOOL QingKe HuangYou", cursive;
+    color: #f5f9ff;
+    font-size: 25px;
+  }
+  main #mainShowcase #headLink {
+    font-family: "ZCOOL QingKe HuangYou", cursive;
+    color: #f5f9ff;
+    font-size: 35px;
+    color: #ffa500;
+    text-decoration: none;
+    font-size: 25px;
+  }
+  main #restOfBody .header_holders {
+    font-family: "ZCOOL QingKe HuangYou", cursive;
+    color: #f5f9ff;
+    font-size: 25px;
+    margin: 20px;
+    padding: 30px;
+    width: 40vw;
+    font-size: 30px;
+  }
+  main #restOfBody .header_holders .head_container h2 {
+    border-bottom: 2px solid #ffa500;
+  }
+  main #restOfBody .content {
+    margin: 50px 0px 40px 0px;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  main #restOfBody .content #about_content_container {
+    padding: 20px;
+  }
+  main #restOfBody .content #about_content_container #content_container_left {
+    width: 50%;
+    padding: 20px;
+  }
+  main #restOfBody .content #about_content_container #content_container_left div {
+    background-image: url("../images/me.jpg");
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+  }
+  main #restOfBody .content #about_content_container #content_container_left p {
+    margin: 3px;
+  }
+  main #restOfBody .content #about_content_container #content_container_left p, main #restOfBody .content #about_content_container #content_container_left span {
+    font-size: 19px;
+    width: 80%;
+  }
+  main #restOfBody .content #about_content_container #content_container_left span {
+    color: #ffa500;
+    font-weight: 600;
+  }
+  main #restOfBody .content #about_content_container #content_container_right .progress_block {
+    margin: 20px 0px;
+  }
+  main #restOfBody .content #about_content_container #content_container_right .progress_block span, main #restOfBody .content #about_content_container #content_container_right .progress_block i {
+    font-size: 30px;
+  }
+  main #restOfBody .content #about_content_container #content_container_right .progress_block p {
+    font-size: 30px;
+  }
+  main #restOfBody .content #about_content_container #content_container_right .progress_block .progress_bar_back {
+    width: 100%;
+    height: 15px;
+    border-radius: 7px;
+  }
+  main #restOfBody .content #about_content_container #content_container_right .progress_block .progress_bar_back #progress_bar_fill1, main #restOfBody .content #about_content_container #content_container_right .progress_block .progress_bar_back #progress_bar_fill2 {
+    background-size: 46.57px 46.57px;
+    height: 15px;
+    border-radius: 7px;
+    -webkit-animation: gradient_fill_animation 12s linear infinite;
+            animation: gradient_fill_animation 12s linear infinite;
+    background-image: linear-gradient(45deg, #f2ff00 25%, #ff7b00 25%, #ff7b00 50%, #f2ff00 50%, #f2ff00 75%, #ff7b00 75%, #ff7b00 100%);
+    width: 90%;
+  }
+  main #restOfBody .content #about_content_container #content_container_right .progress_block .progress_bar_back #progress_bar_fill3 {
+    background-size: 46.57px 46.57px;
+    height: 15px;
+    border-radius: 7px;
+    -webkit-animation: gradient_fill_animation 12s linear infinite;
+            animation: gradient_fill_animation 12s linear infinite;
+    background-image: linear-gradient(45deg, #f2ff00 25%, #ff7b00 25%, #ff7b00 50%, #f2ff00 50%, #f2ff00 75%, #ff7b00 75%, #ff7b00 100%);
+    width: 80%;
+  }
+  main #restOfBody .content #about_content_container #content_container_right .progress_block .progress_bar_back #progress_bar_fill4 {
+    background-size: 46.57px 46.57px;
+    height: 15px;
+    border-radius: 7px;
+    -webkit-animation: gradient_fill_animation 12s linear infinite;
+            animation: gradient_fill_animation 12s linear infinite;
+    background-image: linear-gradient(45deg, #f2ff00 25%, #ff7b00 25%, #ff7b00 50%, #f2ff00 50%, #f2ff00 75%, #ff7b00 75%, #ff7b00 100%);
+    width: 75%;
+  }
+  main #restOfBody .content #about_content_container #content_container_right .progress_block .progress_bar_back #progress_bar_fill5 {
+    background-size: 46.57px 46.57px;
+    height: 15px;
+    border-radius: 7px;
+    -webkit-animation: gradient_fill_animation 12s linear infinite;
+            animation: gradient_fill_animation 12s linear infinite;
+    background-image: linear-gradient(45deg, #f2ff00 25%, #ff7b00 25%, #ff7b00 50%, #f2ff00 50%, #f2ff00 75%, #ff7b00 75%, #ff7b00 100%);
+    width: 85%;
+  }
+  main #restOfBody .content #form_container {
+    width: 80vw;
+    padding: 20px;
+  }
+  main #restOfBody .content #form_container #contact_info div {
+    font-size: 24px;
+    margin: 20px 10px;
+  }
+  main #restOfBody .content #form_container #contact_info i {
+    font-size: 34px;
+  }
+  main #restOfBody .content #form_container #form_holder {
+    font-size: 20px;
+    padding: 20px;
+  }
+  main #restOfBody .content #form_container #form_holder form span {
+    color: #ff0000;
+    font-size: 22px;
+  }
+  main #restOfBody .content #form_container #form_holder form p {
+    padding: 5px 0px;
+  }
+  main #restOfBody .content #form_container #form_holder form div {
+    margin-bottom: 15px;
+  }
+  main #restOfBody .content #form_container #form_holder form div #name, main #restOfBody .content #form_container #form_holder form div #e_mail, main #restOfBody .content #form_container #form_holder form div #textarea {
+    height: 30px;
+    font-size: 20px;
+  }
+  main #restOfBody .content #form_container #form_holder form div #textarea {
+    min-height: 150px;
+    max-height: 250px;
+  }
+  main #restOfBody .content #form_container #form_holder form div #submit_button, main #restOfBody .content #form_container #form_holder form div #reset_button {
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 24px;
+  }
+  main #restOfBody #skills_container {
+    width: 80vw;
+  }
+  main #restOfBody #skills_container .skill_block {
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+  }
+  main #restOfBody #skills_container .skill_block .block_style {
+    width: 100%;
+    height: 100%;
+  }
+  main #restOfBody #skills_container .skill_block .desc_skill_block {
+    height: 175px;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #0f0f0f;
+  }
+  main #restOfBody #skills_container .skill_block .desc_skill_block p {
+    font-size: 14px;
+  }
+  main #restOfBody #skills_container .skill_block .desc_skill_block h3 {
+    font-size: 25px;
+    margin: 3px 10px 10px 10px;
+  }
+  main #restOfBody #my_stats_container {
+    height: 22vh;
+  }
+  main #restOfBody #my_stats_container #stats_holder div {
+    margin: 30px;
+    width: 150px;
+    height: 150px;
+  }
+  main #restOfBody #my_stats_container #stats_holder div i {
+    font-size: 95px;
+  }
+  main #restOfBody #my_stats_container #stats_holder div p {
+    font-size: 24px;
+  }
+  main #restOfBody #projects_container {
+    width: 90vw;
+    min-height: 70vh;
+    margin: 30px 0px 50px 0px;
+  }
+  main #restOfBody #projects_container .project_holders {
+    margin: 10px 6px 20px 6px;
+    width: 284px;
+    height: 160px;
+  }
+  main #restOfBody #projects_container .project_holders .project_desc .hide {
+    font-size: 16px;
+  }
+  main #restOfBody #projects_container .project_holders .project_desc h3 {
+    padding: 10px 0px 0px 0px;
+  }
+  main #restOfBody #projects_container .project_holders .project_desc h4 {
+    padding: 2px 0px 20px 0px;
+  }
+  main #restOfBody #projects_container .project_holders .project_tech {
+    font-size: 22px;
+  }
+}
+/*# sourceMappingURL=responsive_laptop.css.map */

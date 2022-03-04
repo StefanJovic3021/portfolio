@@ -1,0 +1,334 @@
+@import './responsive_laptop';
+
+@mixin customNavFontTablet{
+    @include customFontZCool();
+    font-size: 27px;
+}
+@mixin custonNameFontTablet{
+    @include customFontZCool();
+    font-size: 35px;
+}
+@mixin customHeadFont1Tablet{
+    @include customFontZCool();
+    font-size: 50px;
+}
+@mixin customHeadFont2Tablet{
+    @include customFontZCool();
+    font-size: 30px;
+}
+@mixin customHeadLinkTablet{
+    @include customHeadFont2();
+    color: #ffa500;
+    text-decoration: none;
+    font-size: 30px;
+}
+@mixin progressBarFillingTablet{
+    background-size: 46.57px 46.57px;
+    height: 15px;
+    border-radius: 7px;
+    animation: gradient_fill_animation 12s linear infinite;
+    background-image: linear-gradient(
+        45deg,
+    #f2ff00 25%,
+    #ff7b00 25%,
+    #ff7b00 50%,
+    #f2ff00 50%,
+    #f2ff00 75%,
+    #ff7b00 75%,
+    #ff7b00 100%
+    );
+}
+
+
+@media screen and (max-width: 769px) {
+    header{
+        #logo{
+            height: 90px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url("../images/logo.png");
+        }
+        #main_nav{
+            display: none;
+        }
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        @include customNavFontTablet();
+        height: 20vh;
+        font-size: 40px;
+        #sandwich_button{
+            display: block;
+            #header_sandwich_dropdown{
+                z-index: 1;
+                opacity: 0;
+                display: none;
+                width: 100%;
+                background-color: rgba(24, 26, 27, 0.9);
+                border-bottom: 2px solid rgba(24, 26, 27, 0.9);
+                top: 20vh;
+                position: absolute;
+                justify-content: center;
+                #sandwich_nav{
+                    ul{
+                        li{
+                            padding: 10px;
+                            font-size: 30px;
+                            text-align: center;
+                            list-style-type:none;
+                            a{
+                                color: $standardTextColor;
+                                text-decoration: none;
+                                transition: 0.4s;
+                                &:hover{
+                                    color: #ffa500;
+                                }  
+                            }
+                        }
+                    }
+                }
+            }
+            &:hover #header_sandwich_dropdown{
+                display: flex;
+                opacity: 1;
+            }
+        }
+    }
+    main{
+        #mainShowcase{
+            z-index: 0;
+            height: 80vh;
+            h1, p, a{
+                width: 100%;
+                margin: 20px 0px;
+                text-shadow: 4px 3px 3px rgba(0, 0, 0, 0.9);
+                text-align: center;
+            }
+            h1{
+                @include custonNameFontTablet();
+            }
+            #headText1{
+                @include customHeadFont1Tablet();
+            }
+            #headText2{
+                @include customHeadFont2Tablet();
+            }
+            #headLink{
+                @include customHeadLinkTablet();
+            }
+            video{
+                filter:blur(3px);
+            }
+        }
+        #restOfBody{
+            .header_holders{
+                @include customHeadFont2Laptop();
+                margin: 20px;
+                padding: 30px;
+                width: 50vw;
+                font-size: 24px;
+                .head_container{
+                    h2{
+                        border-bottom: 2px solid #ffa500;
+                    }
+                }
+            }
+            .content{
+                margin: 50px 0px 40px 0px;
+                padding: 20px;
+                border-radius: 20px;
+                #about_content_container{
+                    width: 70vw;
+                    padding: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    #content_container_left{
+                        width: 100%;
+                        padding: 0;
+                        padding-bottom: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        border-right: none;
+                        border-bottom: 2px solid rgb(85, 85, 85);
+                        div{
+                            background-image: url('../images/me.jpg');
+                            width: 250px;
+                            height: 250px;
+                            background-position: center;
+                            background-size: contain;
+                            border: 3px solid rgba(31, 31, 31, 0.733);
+                            border-radius: 125px;
+                        }
+                        p{
+                            margin: 3px;
+                        }
+                        p, span{
+                            font-size: 24px;
+                            width: 70%;
+                        }
+                        span{
+                            color: #ffa500;
+                            font-weight: 600;
+                        }
+                    }
+                    #content_container_right{
+                        width: 100%;
+                        padding: 0;
+                        .progress_block{
+                            margin: 30px 0px;
+                            span, i{
+                                font-size: 30px;
+                            }
+                            p{
+                                font-size: 30px;
+                            }
+                            .progress_bar_back{
+                                width: 100%;
+                                height: 15px;
+                                border-radius: 7px;
+                                #progress_bar_fill1, #progress_bar_fill2{
+                                    @include progressBarFillingLaptop();
+                                    width: 90%;
+                                }
+                                #progress_bar_fill3{
+                                    @include progressBarFillingLaptop();
+                                    width: 80%;
+                                }
+                                #progress_bar_fill4{
+                                    @include progressBarFillingLaptop();
+                                    width: 75%;
+                                }
+                                #progress_bar_fill5{
+                                    @include progressBarFillingLaptop();
+                                    width: 85%;
+                                }
+                            }
+                        }
+                    }
+                }
+                #form_container{
+                    width: 80vw;
+                    padding: 10px;
+                    #contact_info{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        div{
+                            font-size: 22px;
+                            margin: 20px 5px;
+                            display: block;
+                            text-align: center;
+                            border: none;
+                            p{
+                                border-bottom: 2px solid rgb(85, 85, 85);
+                            }
+                        }
+                        i{
+                            font-size: 36px;
+                        }
+                    }
+                    #form_holder{
+                        font-size: 20px;
+                        padding: 20px;
+                        form{
+                            span{
+                                color: #ff0000;
+                                font-size: 20px;
+                            }
+                            p{
+                                padding: 5px 0px;
+                            }
+                            div{
+                                margin-bottom: 15px;
+                                #name, #e_mail, #textarea{
+                                    height: 30px;
+                                    font-size: 20px;
+                                }
+                                #textarea{
+                                    min-height: 150px;
+                                    max-height: 220px;
+                                }
+                                #submit_button, #reset_button{
+                                    border-radius: 10px;
+                                    padding: 10px;
+                                    margin: 10px;
+                                    font-size: 22px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #my_stats_container{
+                height: 19vh;
+                #stats_holder{
+                    div{
+                        margin: 30px;
+                        width: 120px;
+                        height: 120px;
+                        i{
+                            font-size: 85px;
+                        }
+                        p{
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+            #projects_container{
+                width: 90vw;
+                min-height: 70vh;
+                margin: 30px 0px 50px 0px;
+                .project_holders{
+                    margin: 10px 6px 60px 6px;
+                    width: 284px;
+                    height: 160px;
+                    .project_desc{
+                        .hide{
+                            font-size: 16px;
+                        }
+                        h3{
+                            padding: 10px 0px 0px 0px;
+                        }
+                        h4{
+                            padding: 2px 0px 20px 0px;
+                        }
+                    }
+                    .project_tech{
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $verydarkcolor;
+        width: 100%;
+        section{
+            p{
+                font-size: 20px;
+            }
+            p, i{
+                color: $standardTextColor;
+                font-family: $dosisFont;
+                margin: 5px 20px 5px 20px;
+            }
+            i{
+                font-size: 40px;
+                transition: 0.5s;
+                &:hover{
+                    color: #ffa500;
+                    transform:scale(1.2);
+                }
+            }
+        }
+    }
+}

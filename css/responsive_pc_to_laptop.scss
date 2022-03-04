@@ -1,0 +1,83 @@
+@import './variables';
+
+@media screen and (max-width: 1400px){
+    main{
+        #restOfBody{
+            .content{
+                #form_container{
+                    width: 80vw;
+                    height: 60vh;
+                    display: flex;
+                    padding: 20px;
+                    #contact_info{
+                        @include customFontDosis();
+                        width: 50%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        div{
+                            display: flex;
+                            justify-content: space-between;
+                            margin: 20px;
+                            border-bottom: 2px solid rgb(85, 85, 85);
+                        }
+                        i{
+                            color: #ffa500;
+                            font-size: 50px;
+                            transition: 0.3s ease;
+                            &:hover{
+                            transform: scale(1.1) rotate(3deg);
+                            color: rgb(255, 102, 0);
+                            }
+                        }
+                        border-right: 2px solid rgb(85, 85, 85);
+                    }
+                    #form_container{
+                        width: 80vw;
+                        padding: 20px;
+                        #contact_info{
+                            div{
+                                font-size: 24px;
+                                margin: 20px 10px;
+                            }
+                            i{
+                                font-size: 34px;
+                            }
+                        }
+                        #form_holder{
+                            font-size: 20px;
+                            padding: 20px;
+                            form{
+                                span{
+                                    color: #ff0000;
+                                    font-size: 22px;
+                                }
+                                p{
+                                    padding: 5px 0px;
+                                }
+                                div{
+                                    margin-bottom: 15px;
+                                    #name, #e_mail, #textarea{
+                                        height: 30px;
+                                        font-size: 20px;
+                                    }
+                                    #textarea{
+                                        min-height: 150px;
+                                        max-height: 250px;
+                                    }
+                                    #submit_button, #reset_button{
+                                        border-radius: 10px;
+                                        padding: 10px;
+                                        margin: 10px;
+                                        font-size: 24px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
